@@ -4,7 +4,7 @@
         <div class="container">
           <div class="row mt-5">
             <div class="col-lg-3 col-sm-12">
-              <h3>Pages</h3>
+              <h4>Pages</h4>
               <ul>
                 <li>Blog</li>
                 <li>Tentang Kami</li>
@@ -17,7 +17,7 @@
               </ul>
             </div>
             <div class="col-lg-3 col-sm-12">
-              <h3>Tag Populer</h3>
+              <h4>Tag Populer</h4>
               <ul>
                 <li>Pemandangan</li>
                 <li>Contoh Surat</li>
@@ -28,7 +28,7 @@
               </ul>
             </div>
                 <div class="col-lg-3 col-sm-12">
-                  <h3>Foto Populer</h3>
+                  <h4>Foto Populer</h4>
                   <ul>
                     <li>Artis</li>
                     <li>Cantik</li>
@@ -39,7 +39,7 @@
                   </ul>
             </div>
                 <div class="col-lg-3 col-sm-12">
-                  <h3>Newsletter</h3>
+                  <h4>Newsletter</h4>
                   <p style="color: rgb(145, 141, 145)">Signup for our newsletter to get the latest news in your inbox.</p>
                   <input type="email" class="form-control" placeholder="Enter your email" >
                   <small style="color: rgb(145, 141, 145);">Your email is safe with us. We don't spam.</small>

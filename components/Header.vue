@@ -1,7 +1,7 @@
 <template>
     <div>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
+      <nav class="navbar fixed-top navbar-expand-lg" :class="{ 'navbar-scrolled': scrolled }">
+        <div class="container">
           <NuxtLink to="/" class="navbar-brand">
             <img src="/halal.jpeg" alt="" width="5%">
           </NuxtLink>
@@ -16,13 +16,13 @@
                 </li>
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Link
+                    Jelajahi
                   </a>
                   <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    <li><a class="dropdown-item" href="#">Foto</a></li>
+                    <li><a class="dropdown-item" href="#">Walpaper</a></li>
+                    <li><a class="dropdown-item" href="#">Background</a></li>
+                    <li><a class="dropdown-item" href="#">Animasi</a></li>
                   </ul>
                 </li>
               </ul>
@@ -32,3 +32,36 @@
       </nav>
     </div>
 </template>
+
+
+<style>
+  .navbar {
+    transition: background-color 0.5s ease-in-out;
+  }
+
+  .navbar-scrolled {
+    background-color: #ffffff; 
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+  }
+</style>
+
+<script>
+export default {
+  data() {
+    return {
+      scrolled: false,
+    };
+  },
+  mounted() {
+    window.addEventListener('scroll', this.handleScroll);
+  },
+  beforeDestroy() {
+    window.removeEventListener('scroll', this.handleScroll);
+  },
+  methods: {
+    handleScroll() {
+      this.scrolled = window.scrollY > 50; // Ganti nilai ini sesuai dengan tinggi yang diinginkan sebelum navbar berubah
+    },
+  },
+};
+</script>

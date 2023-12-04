@@ -1,12 +1,13 @@
 <script>
   import('~/assets/cutom.css')
 </script>
-
 <template>
-    <div>
-      <div class="section-populer-image">
+  <div>
+      <Hero/>
+      <section class="section-populer-image">
         <div class="container">
           <h2 class="text-center px-3 py-3">Gambar Populer</h2>
+          <div class="small-border"></div>
           <div class="row">
             <div class="col-lg-3">
             <div class="card">
@@ -21,12 +22,16 @@
             </div>
             </div>
           </div>
+          <div class="d-flex justify-content-center align-items-center mt-5">
+            <a href="#" class="btn btn-primary text-decoration-none">Lihat Semua</a>
+          </div>
         </div>
+      </section>
 
-      </div>
       <section class="section-advantages-kibris mt-5">
         <div class="container">
           <h2 class="text-center px-3 py-3">Kelebihan menggunakan kibrisPDR</h2>
+          <div class="small-border"></div>
           <div class="row">
             <div class="col-lg-4 col-xl-4 col-sm-12">
               <div class="card border-0 feature-box bg-feature text-black" style="background-size: cover;">
@@ -41,5 +46,6 @@
           </div>
         </div>
       </section>
+      
     </div>
 </template>
