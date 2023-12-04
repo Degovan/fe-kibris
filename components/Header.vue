@@ -1,6 +1,6 @@
-<template>
+<template lang="">
     <div>
-      <nav class="navbar fixed-top navbar-expand-lg" :class="{ 'navbar-scrolled': scrolled }">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container">
           <NuxtLink to="/" class="navbar-brand">
             <img src="/halal.jpeg" alt="" width="5%">
@@ -12,7 +12,7 @@
             <div class="collapse navbar-collapse" id="navbarScroll">
               <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  <NuxtLink to="/" class="nav-link active" aria-current="page"> Home </NuxtLink>
                 </li>
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -32,36 +32,3 @@
       </nav>
     </div>
 </template>
-
-
-<style>
-  .navbar {
-    transition: background-color 0.5s ease-in-out;
-  }
-
-  .navbar-scrolled {
-    background-color: #ffffff; 
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
-  }
-</style>
-
-<script>
-export default {
-  data() {
-    return {
-      scrolled: false,
-    };
-  },
-  mounted() {
-    window.addEventListener('scroll', this.handleScroll);
-  },
-  beforeDestroy() {
-    window.removeEventListener('scroll', this.handleScroll);
-  },
-  methods: {
-    handleScroll() {
-      this.scrolled = window.scrollY > 50; // Ganti nilai ini sesuai dengan tinggi yang diinginkan sebelum navbar berubah
-    },
-  },
-};
-</script>

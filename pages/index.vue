@@ -10,16 +10,16 @@
           <div class="small-border"></div>
           <div class="row">
             <div class="col-lg-3">
-            <div class="card">
-              <img src="/halal.jpeg" class="card-img-top" alt="images">
-              <div class="card-body d-block d-flex justify-content-between">
-                <h3 class="fs-5">Some quick </h3>
-                <div class="border-none btn btn-light btn-sm rounded-5 items-align-center" type="button"><i class="bi bi-eye"></i></div>
+              <div class="card">
+                <img src="/halal.jpeg" class="card-img-top" alt="images">
+                <div class="card-body d-block d-flex justify-content-between">
+                  <h3 class="fs-5">Some quick </h3>
+                  <div class="border-none btn btn-light btn-sm rounded-5 items-align-center" type="button"><i class="bi bi-eye"></i></div>
+                </div>
+                <div class="py-3 px-3">
+                  <a href="#" class="text-start fw-normal text-decoration-none">Lihat Detail</a>
+                </div>
               </div>
-              <div class="py-3 px-3">
-                <a href="#" class="text-start fw-normal text-decoration-none">Lihat Detail</a>
-              </div>
-            </div>
             </div>
           </div>
           <div class="d-flex justify-content-center align-items-center mt-5">
