@@ -1,0 +1,40 @@
+.bg-feature {
+    background-color: rgb(253, 237, 240);
+    color: black;
+}
+
+.feature-box {
+    padding: 50px;
+    position: relative;
+    overflow: hidden !important;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+}
+
+.feature-box .box-icon {
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    background-color: brown;
+    font-size: 28px;
+    color: white;
+    width: 56px;
+    height: 56px;
+}
+.feature-box .icon-right {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    font-size: 100px;
+    letter-spacing: -0.10em;
+}
+
+footer h3 {
+    margin-top: 20px;
+}
+footer ul li {
+    list-style-type: none;
+    padding: 4px 0px;
+    margin-left: -30px;
+
+}
