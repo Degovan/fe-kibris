@@ -1,5 +1,9 @@
-<script>
+<script setup>
   import('~/assets/cutom.css')
+
+  const { data: picture } = await useFetch('https://kibrispdrclone.websitesekolah.net/api/contents');
+
+
 </script>
 <template>
   <div>
@@ -9,11 +13,11 @@
           <h2 class="text-center px-3 py-3">Gambar Populer</h2>
           <div class="small-border"></div>
           <div class="row">
-            <div class="col-lg-3">
+            <div class="col-lg-3" v-for="item in picture" :key="item.id">
               <div class="card">
                 <img src="/halal.jpeg" class="card-img-top" alt="images">
                 <div class="card-body d-block d-flex justify-content-between">
-                  <h3 class="fs-5">Some quick </h3>
+                  <h3 class="fs-5"> {{ item.data }} </h3>
                   <div class="border-none btn btn-light btn-sm rounded-5 items-align-center" type="button"><i class="bi bi-eye"></i></div>
                 </div>
                 <div class="py-3 px-3">

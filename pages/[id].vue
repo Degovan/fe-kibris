@@ -59,7 +59,7 @@ import axios from 'axios'
 
 const { data: content } = useAsyncData('content', async () => {
     try {
-        const response = await axios.get(`http://localhost:8000/api/contents/${useRoute().params.id}`)
+        const response = await axios.get(`https://kibrispdrclone.websitesekolah.net/api/contents/${useRoute().params.id}`)
         return response.data.data.content;
     } catch(error) {
         return null;

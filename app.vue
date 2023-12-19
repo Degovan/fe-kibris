@@ -4,8 +4,8 @@
 
 <template>
     <div>
+      <NuxtLoadingIndicator/>
        <NuxtLayout :layout="layout">
-        <NuxtLoadingIndicator/>
         <NuxtPage/>
       </NuxtLayout>
     </div>

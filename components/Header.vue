@@ -1,6 +1,6 @@
 <template lang="">
     <div>
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary">
         <div class="container">
           <NuxtLink to="/" class="navbar-brand">
             <img src="/halal.jpeg" alt="" width="5%">
