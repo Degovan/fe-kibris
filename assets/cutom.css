@@ -98,7 +98,7 @@ section {
   z-index: 99;
 }
 
-.hover-4-description {
+.hover-4-content:hover .hover-4-description {
   position: absolute;
   top: 2rem;
   left: 2rem;
@@ -107,7 +107,6 @@ section {
   padding: 0 1rem;
   z-index: 99;
   transform: translateX(-1.5rem);
-  opacity: 0;
   transition: all 0.3s;
 }
 

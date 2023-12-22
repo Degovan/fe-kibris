@@ -1,10 +1,27 @@
 <script setup>
+  import axios from 'axios'
+  import PopularImage from '~/components/Home/PopularImage.vue';
   import('~/assets/cutom.css')
 
-  const { data: picture } = await useFetch('https://kibrispdrclone.websitesekolah.net/api/contents');
+  let popularPage = 2
 
+  const { data: populars } = useAsyncData('content', async () => {
+    try {
+        const response = await axios.get(`https://kibrispdrclone.websitesekolah.net/api/contents/populars`)
+        return response.data.data.contents;
+    } catch(error) {
+        return null;
+    }
+  })
 
+  const loadMorePopular = async () => {
+    const newPopulars = await axios.get(`https://kibrispdrclone.websitesekolah.net/api/contents/populars?page=${popularPage}`)
+
+    populars.value.push(...newPopulars.data.data.contents)
+    popularPage++
+  }
 </script>
+
 <template>
   <div>
       <Hero/>
@@ -13,15 +30,9 @@
           <h2 class="text-center px-3 py-3">Gambar Populer</h2>
           <div class="small-border"></div>
           <div class="row">
-            <div class="col-lg-3" v-for="item in picture" :key="item.id">
-            <div class="hover hover-4 text-white rounded"><img src="https://bootstrapious.com/i/snippets/sn-img-hover/hoverSet-7.jpg" alt="">
-              <div class="hover-overlay"></div>
-              <div class="hover-4-content">
-                <h3 class="hover-4-title text-uppercase font-weight-bold mb-0"><span class="font-weight-light">Image </span>Caption</h3>
-                <p class="hover-4-description text-uppercase mb-0 small">Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt</p>
-              </div>
-            </div>
-             
+            <div class="col-lg-3 mt-4" v-for="content in populars" :key="content.id">
+                <PopularImage :content="content" />
+
               <!-- <div class="card">
                 <img src="/halal.jpeg" class="card-img-top" alt="images">
                 <div class="card-body d-block d-flex justify-content-between">
@@ -35,7 +46,7 @@
             </div>
           </div>
           <div class="d-flex justify-content-center align-items-center mt-5">
-            <a href="#" class="btn btn-primary text-decoration-none">Lihat Semua</a>
+            <button v-show="popularPage < 3" @click="loadMorePopular" class="btn btn-primary text-decoration-none">Lihat Semua</button>
           </div>
         </div>
       </section>
@@ -58,6 +69,6 @@
           </div>
         </div>
       </section>
-      
+
     </div>
 </template>
