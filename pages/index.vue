@@ -35,7 +35,7 @@
             </div>
           </div>
           <div class="d-flex justify-content-center align-items-center mt-5">
-            <button v-show="popularPage < 3" @click="loadMorePopular" class="btn btn-primary text-decoration-none">Lihat Semua</button>
+            <button v-show="popularPage < 3" @click="loadMorePopular" class="btn btn-primary text-decoration-none">Tampilkan Sisanya</button>
           </div>
         </div>
       </section>

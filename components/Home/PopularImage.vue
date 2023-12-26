@@ -1,11 +1,20 @@
 <template>
-    <div class="hover hover-4 text-white rounded"><img :src="content.thumbnail" alt="">
-        <div class="hover-overlay"></div>
-        <div class="hover-4-content">
-            <h3 class="hover-4-title text-uppercase font-weight-bold mb-0"><span class="font-weight-light">{{ content.title }}</span></h3>
-            <p class="hover-4-description text-uppercase mb-0 small">Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt</p>
+    <div class="card">
+    <div class="card-image-populer">
+        <img :src="content.thumbnail" alt="" class="card-img-top">
+         <div class="info">
+            <h4>{{ content.title }}</h4>
+            
+            <p class="mt-4"> <b>Share </b>
+                <ul>
+                    <li>Facebook</li>
+                    <li>Twitter</li>
+                </ul>
+            </p>
         </div>
     </div>
+    </div>
+    
 </template>
 
 <script>

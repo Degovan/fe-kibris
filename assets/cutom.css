@@ -18,98 +18,91 @@ section {
     background-size: cover;
     height: 30vh !important;
 }
-.bg-feature {
-    background-color: rgb(253, 237, 240);
-    color: black;
-}
 
-.feature-box {
-    padding: 50px;
-    position: relative;
-    overflow: hidden !important;
-    -moz-border-radius: 6px;
-    -webkit-border-radius: 6px;
-}
+/* Image Popular */
 
-.feature-box .box-icon {
-    text-align: center;
-    border: none;
-    border-radius: 5px;
-    background-color: brown;
-    font-size: 28px;
-    color: white;
-    width: 56px;
-    height: 56px;
-}
-.feature-box .icon-right {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    font-size: 100px;
-    letter-spacing: -0.10em;
-}
-.hover {
-  overflow: hidden;
+.card-image-populer {
+  background: white;
   position: relative;
-  padding-bottom: 60%;
+  display: flex;
+  align-items: flex-end;
+  transition: 0.4s ease-out;
 }
 
-.hover-overlay {
+.card-image-populer h4 {
+  font-size: 18px;
+}
+
+.card-image-populer:hover:before {
+  opacity: 1;
+}
+
+.card-image-populer:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
   width: 100%;
   height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 90;
-  transition: all 0.4s;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 2;
+  transition: 0.5s;
+  opacity: 0;
 }
 
-.hover img {
+.card-image-populer img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
   position: absolute;
   top: 0;
   left: 0;
-  transition: all 0.3s;
 }
 
-.hover-content {
+.card-image-populer .info {
+  padding: 14px;
   position: relative;
-  z-index: 99;
+  z-index: 3;
+  color: white;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 0.5s;
 }
 
-
-.hover-4 img {
-  width: 110%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.card-image-populer:hover .info {
+  opacity: 1;
+  transform: translateY(0px);
 }
 
-.hover-4 .hover-overlay {
-  background: rgba(0, 0, 0, 0.4);
-  z-index: 90;
+.card-image-populer .info h1 {
+  margin: 0px;
 }
 
-.hover-4-title {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  padding: 3rem;
-  z-index: 99;
+.card-image-populer .info p {
+  letter-spacing: 1px;
+  font-size: 15px;
+  margin-top: 8px;
 }
 
-.hover-4-content:hover .hover-4-description {
-  position: absolute;
-  top: 2rem;
-  left: 2rem;
-  text-align: right;
-  border-right: 3px solid #fff;
-  padding: 0 1rem;
-  z-index: 99;
-  transform: translateX(-1.5rem);
-  transition: all 0.3s;
+.card-image-populer .info button {
+  padding: 0.6rem;
+  outline: none;
+  border: none;
+  border-radius: 3px;
+  background: white;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.4s ease;
 }
 
+.card-image-populer .info button:hover {
+  background: dodgerblue;
+  color: white;
+}
+
+/* Footer */
 footer h3 {
     margin-top: 20px;
 }
