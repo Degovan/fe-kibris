@@ -12,11 +12,11 @@ section {
 }
 
 .bg-image {
-    background-image: url('/bg.jpg');
+    /* background-image: url('/bg.jpg'); */
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    height: 50vh !important;
+    height: 30vh !important;
 }
 .bg-feature {
     background-color: rgb(253, 237, 240);
