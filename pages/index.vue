@@ -30,7 +30,7 @@
           <h4 class="text-center px-3 py-3">Gambar Populer</h4>
           <div class="small-border"></div>
           <div class="row">
-            <div class="col-lg-3 mt-4" v-for="content in populars" :key="content.id">
+            <div class="col-lg-4 mt-4" v-for="content in populars" :key="content.id">
                 <PopularImage :content="content" />
             </div>
           </div>
