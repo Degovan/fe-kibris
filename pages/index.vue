@@ -3,11 +3,12 @@
   import PopularImage from '~/components/Home/PopularImage.vue';
   import('~/assets/cutom.css')
 
+  const apiUrl = useRuntimeConfig().public.apiUrl;
   let popularPage = 2
 
   const { data: populars } = useAsyncData('content', async () => {
     try {
-        const response = await axios.get(`https://kibrispdrclone.websitesekolah.net/api/contents/populars`)
+        const response = await axios.get(`${apiUrl}/contents/populars`)
         return response.data.data.contents;
     } catch(error) {
         return null;
@@ -15,7 +16,7 @@
   })
 
   const loadMorePopular = async () => {
-    const newPopulars = await axios.get(`https://kibrispdrclone.websitesekolah.net/api/contents/populars?page=${popularPage}`)
+    const newPopulars = await axios.get(`${apiUrl}/contents/populars?page=${popularPage}`)
 
     populars.value.push(...newPopulars.data.data.contents)
     popularPage++

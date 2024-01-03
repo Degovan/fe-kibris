@@ -57,9 +57,11 @@
 <script setup>
 import axios from 'axios'
 
+const apiUrl = useRuntimeConfig().public.apiUrl;
+
 const { data: content } = useAsyncData('content', async () => {
     try {
-        const response = await axios.get(`https://kibrispdrclone.websitesekolah.net/api/contents/${useRoute().params.id}`)
+        const response = await axios.get(`${apiUrl}/contents/${useRoute().params.slug}`)
         return response.data.data.content;
     } catch(error) {
         return null;
