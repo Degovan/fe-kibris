@@ -4,7 +4,7 @@
             <img :src="content.thumbnail" alt="" class="card-img-top">
             <div class="info">
                 <h4>{{ content.title }}</h4>
-                
+
                 <p class="mt-4"> <b>Share </b>
                     <ul>
                         <li>Facebook</li>
@@ -14,7 +14,6 @@
             </div>
         </div>
     </div>
-    
 </template>
 
 <script>

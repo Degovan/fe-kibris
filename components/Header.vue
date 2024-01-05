@@ -19,10 +19,9 @@
                     Jelajahi
                   </a>
                   <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Foto</a></li>
-                    <li><a class="dropdown-item" href="#">Walpaper</a></li>
-                    <li><a class="dropdown-item" href="#">Background</a></li>
-                    <li><a class="dropdown-item" href="#">Animasi</a></li>
+                    <li v-for="category in categories" :key="category.id">
+                        <NuxtLink :href="'/categories/' + category.slug" class="dropdown-item">{{ category.name }}</NuxtLink>
+                    </li>
                   </ul>
                 </li>
               </ul>
@@ -32,3 +31,17 @@
       </nav>
     </div>
 </template>
+
+<script setup>
+    import axios from 'axios';
+
+    const apiUrl = useRuntimeConfig().public.apiUrl;
+    const { data: categories } = useAsyncData('categories', async () => {
+        try {
+            const response = await axios.get(`${apiUrl}/categories`)
+            return response.data.data.categories;
+        } catch(error) {
+            return [];
+        }
+    })
+</script>

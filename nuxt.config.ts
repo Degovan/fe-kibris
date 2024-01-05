@@ -46,8 +46,8 @@ export default defineNuxtConfig({
   modules: ["nuxt-icon"],
   runtimeConfig: {
     public: {
-      apiUrl: 'https://kibrispdrclone.websitesekolah.net/api',
-    //   apiUrl: 'http://localhost:8000/api',
+    //   apiUrl: 'https://kibrispdrclone.websitesekolah.net/api',
+      apiUrl: 'http://localhost:8000/api',
     }
   }
 });
