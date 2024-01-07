@@ -41,9 +41,9 @@ async function loadContents(id, page = 1) {
             <h3 class="mb-4">Konten dengan kategori: {{ category?.name }}</h3>
 
             <div class="row">
-                <div class="col-md-4 mt-4" v-if="contents" v-for="content in contents" :key="content.id">
+                <NuxtLink :to="`/contents/${content.slug}`" class="col-md-4 mt-4" v-if="contents" v-for="content in contents" :key="content.id">
                     <PopularImage :content="content"/>
-                </div>
+                </NuxtLink>
             </div>
             <div class="row mt-4">
                 <div class="col-12 text-center">

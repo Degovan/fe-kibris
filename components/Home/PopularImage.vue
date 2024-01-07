@@ -1,5 +1,5 @@
 <template>
-    <div class="card">
+    <NuxtLink :to="`/contents/${content.slug}`" class="card">
         <div class="card-image-populer">
             <img :src="content.thumbnail" alt="" class="card-img-top">
             <div class="info">
@@ -13,7 +13,7 @@
                 </p>
             </div>
         </div>
-    </div>
+    </NuxtLink>
 </template>
 
 <script>
